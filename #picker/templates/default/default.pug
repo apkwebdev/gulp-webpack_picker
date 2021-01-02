@@ -1,0 +1,35 @@
+include ../../../#project/templates/#subtemplates/st-vars.pug
+include ../../settings/presets/mixins.pug
+
+block variables
+
+doctype html
+html(lang=lang)
+  head
+    meta(charset="utf-8")
+    include ../#subtemplates/st-if-IE.pug
+    title #{common_title}#{title}
+    include ../#subtemplates/st-meta.pug
+    include ../#subtemplates/st-favicon.pug
+    script(src="./scripts/vendor/modernizr.min.js")
+    include ../../../#project/templates/#subtemplates/st-fonts.pug
+    link(rel="stylesheet" href="./styles/common.min.css")
+    link(rel="stylesheet" href="./styles/templates/" + template + ".min.css")
+    link(rel="stylesheet" href="./styles/pages/" + pagename + ".min.css")
+  body
+    include ../../../#project/templates/#subtemplates/st-browserupgrade.pug
+    .page
+      .page__header-wrap 
+        include ../../../#project/templates/#subtemplates/st-header.pug
+      .page__content.content_page.container-page#container-page
+        .content_page__sidebar-wrap.sidebar-wrap 
+          include ../../../#project/templates/#subtemplates/st-sidebar.pug
+        .content_page__main-wrap.main-wrap 
+          block main
+        .content_page__aside-wrap.aside-wrap 
+          include ../../../#project/templates/#subtemplates/st-aside.pug
+      .page__footer-wrap 
+        include ../../../#project/templates/#subtemplates/st-footer.pug
+    
+    block scripts
+    script(src="./scripts/bundle.min.js")
