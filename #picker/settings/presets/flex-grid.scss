@@ -1,29 +1,31 @@
-// ===  mixins list: 
+// ===  mixins list:
 // row, col, size, sizebp, bp, padding, margin
 
 @mixin row($hos: $hos1, $vos: $vos1) {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -$hos / 2;
-  margin-right: -$hos / 2;
   padding-top: 2 * $vos;
-  margin-bottom: -$vos; 
+  margin-right: -$hos / 2;
+  margin-bottom: -$vos;
+  margin-left: -$hos / 2;
 }
 
 @mixin col($hos: $hos1, $vos: $vos1) {
-  margin-left: $hos / 2;
-  margin-right: $hos / 2;
   margin-top: -$vos;
+  margin-right: $hos / 2;
   margin-bottom: 2 * $vos;
+  margin-left: $hos / 2;
 }
 
 @mixin size($n, $hos: $hos1, $columns: $columns12) {
   $val: 100% / $columns * $n;
+
   width: calc(#{$val} - #{$hos});
 }
 
 @mixin sizebp($bp, $n, $hos: $hos1, $columns: $columns12) {
   $val: 100% / $columns * $n;
+
   @media screen and (max-width: $bp) {
     width: calc(#{$val} - #{$hos});
   }
@@ -36,13 +38,13 @@
 }
 
 @mixin padding($hos: $hos1) {
-  padding-left: $hos;
   padding-right: $hos;
+  padding-left: $hos;
 }
 
 @mixin margin($hos: $hos1) {
-  margin-left: $hos;
   margin-right: $hos;
+  margin-left: $hos;
 }
 
 // Сетка с резиновыми размерами офсетов (маржинов) пока что в архиве, т.к. ie11 не понимает вложенных calc() и firefox тупит на подсчётах!
@@ -63,7 +65,7 @@
 //   @include fst(margin-bottom, 2 * $vos, $k);
 // }
 
-// @function fsb-x($bpl, $bpu, $fsl, $fsu, $columns, $n) { 
+// @function fsb-x($bpl, $bpu, $fsl, $fsu, $columns, $n) {
 //   $colwidth: 100% / $columns * $n;
 //   @return calc(#{$colwidth} - #{$fsl} + #{($fsu - $fsl) / 1px} * (100vw - #{$bpl}) / #{($bpu - $bpl) / 1px});
 // }
@@ -81,7 +83,7 @@
 //     width: $res;
 //   }
 //   @media screen and (max-width: $bpu) {
-//     width: $res; 
+//     width: $res;
 //   }
 // }
 
@@ -90,10 +92,10 @@
 //   $fsl: $fsu * $k;
 //   $bpu: $container-page;
 //   $bpl: $bpu * $scr;
-  
+
 //   $val: 100% / $columns * $n;
 
 //   @media screen and (max-width: $bp) {
-//     width: calc(#{$val} - #{fsb($bpl, $bpu, $fsl, $fsu)}); 
+//     width: calc(#{$val} - #{fsb($bpl, $bpu, $fsl, $fsu)});
 //   }
 // }

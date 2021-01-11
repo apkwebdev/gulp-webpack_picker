@@ -115,6 +115,10 @@ const groupMedia = require('gulp-group-css-media-queries');
 // const purgeCSS = require('gulp-purgecss'); // На рассмотрении
 const csso = require('gulp-csso');  
   // минификация css файлов, по умолчанию минифицирует
+const gulpStylelint = require('gulp-stylelint');
+  // Отслеживание порядка написания стилей
+  // настройка в файле .stylelintrc.json
+  // игнор-лист в файле .stylelintignore
 
 // Модули для работы со скриптами
 const webpackStream = require('webpack-stream');
@@ -195,6 +199,15 @@ function stylesPages() {
     .pipe(rename({ dirname: '' }))
     .pipe(gulpif(!production, sourcemaps.write('')))
     .pipe(gulp.dest(paths.styles.dest.pages))
+};
+
+function lintCss() {
+  return gulp.src(paths.styles.watch)
+    .pipe(gulpStylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
 };
 
 // Работаем со сценариями
@@ -412,6 +425,7 @@ exports.default = gulp.series(clean, create, dev);
 
 // exports.pg = pages;
 // exports.st = styles;
+exports.stl = lintCss; 
 // exports.scr = scripts;
 // exports.png = spritePNG;
 // exports.svg = spriteSVG;

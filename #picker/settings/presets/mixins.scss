@@ -1,17 +1,17 @@
 // === mixins list:
 // font-face, box, svgbox, ie, flexc, bg-cover
 
-
 // === Подключение локальных шрифтов ===
 @mixin font-face($fname, $fpath, $fweight: normal, $fstyle: normal) {
   @font-face {
     font-family: quote($fname);
-    src: local($fname),
+    src:
+      local($fname),
       url(#{$fpath}.woff2) format("woff2"),
       url(#{$fpath}.woff) format("woff"),
       url(#{$fpath}.ttf) format("ttf");
-    font-weight: $fweight;
     font-style: $fstyle;
+    font-weight: $fweight;
     font-display: swap;
   }
 }
@@ -42,13 +42,14 @@
 @mixin svgbox-fst($bw: 1, $bh: 1, $height: $body-font-size) {
   @include fst(width, $bw / $bh * $height);
   @include fst(height, $height);
+
   width: $bw / $bh * $height;
   height: $height;
 }
 
 // === Стили только для IE10 и IE11 ===
 // @include ie {
-//   .classname { 
+//   .classname {
 //     transform: translate(-50%, -50%); // центрует флексы правильно
 //     height: 64px; // min-height ie не понимает!
 //     min-height: 1vh ; // здесь важно значение именно в vh и большее нуля, тогда будет работать растягивание элемента ребёнка по высоте до прибитого футера его родителем даже когда контента в дите мало
@@ -56,7 +57,7 @@
 // }
 @mixin ie {
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    @content; 
+    @content;
   }
 }
 
@@ -64,14 +65,14 @@
 // @include centerflex;
 @mixin flexс {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 @mixin bg-cover {
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 // archive
