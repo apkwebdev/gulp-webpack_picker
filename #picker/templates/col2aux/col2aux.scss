@@ -1,6 +1,6 @@
 @import "../../../#project/styles/_presets.scss";
-@include bp($container-page) { #zooming { display: none; } }
-/*****************===  ./template/col3/col3.scss starting  ===*****************/
+@include bp($container-page-aux) { #zooming { display: none; } }
+/**********===  ./#picker/template/col2aux/col2aux.scss starting  ===**********/
 .page {
   @include box(100%); 
 // Прибиваем footer к низу страницы
@@ -38,25 +38,6 @@
     @include bp($bp4) { display: none; }
   }
 
-  &__aside-wrap { background-color: rgb(145, 167, 145);
-    @include fst(max-width, $aside-width); 
-    @include fst(min-width, $aside-width);
-
-    @include fst(padding-left, $aside-padding);
-    @include fst(padding-right, $aside-padding);
-    @include fst(padding-top, $aside-padding);
-    @include fst(padding-bottom, $aside-padding);
-
-    // здесь мы увеличиваем скорость уменьшения .content_page__aside-wrap
-    // причём, делаем это в bp меньше $container-page хотя бы на 1px, чтобы оно не переопределило правило, заданное миксином fst в bp с $container-page.
-    @include bp($container-page - 1px) {
-      max-width: fst(1280px, $aside-width + 35px, .57);
-      min-width: fst(1280px, $aside-width + 35px, .57);
-    }
-
-    @include bp($bp5) { display: none; }
-  }
-
   &__main-wrap { background-color: rgb(161, 172, 61); 
     width: $main-width;
     .zoom-in & { 
@@ -69,4 +50,4 @@
     @include fst(padding-bottom, $main-padding);
   } 
 }
-/********************  ./template/col3/col3.scss ending  ********************/
+/**************  ./#picker/template/col2aux/col2aux.scss ending  **************/

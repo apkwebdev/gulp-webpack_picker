@@ -21,11 +21,11 @@ html(lang=lang)
     .page
       .page__header-wrap 
         include ../../../#project/templates/#subtemplates/st-header.pug
-      .page__content.content_page.container-page-aux#container-page
+      .page__content.content_page.container-page#container-page
         .content_page__main-wrap.main-wrap 
           block main
       .page__footer-wrap 
         include ../../../#project/templates/#subtemplates/st-footer.pug
     
-    block scripts
     script(src="./scripts/bundle.min.js")
+    block scripts

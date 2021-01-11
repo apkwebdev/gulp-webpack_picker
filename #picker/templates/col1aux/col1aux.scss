@@ -1,6 +1,6 @@
 @import "../../../#project/styles/_presets.scss";
 @include bp($container-page-aux) { #zooming { display: none; } }
-/******************===  ./template/col1/col1.scss starting  ===****************/
+/**********===  ./#picker/template/col1aux/col1aux.scss starting  ===**********/
 .page {
   @include box(100%); 
 // Прибиваем footer к низу страницы
@@ -38,4 +38,4 @@
     @include fst(padding-bottom, $main-padding);
   } 
 }
-/*********************  ./template/col1/col1.scss ending  *********************/
+/*************  ./#picker/template/col1aux/col1aux.scss ending  ***************/

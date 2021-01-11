@@ -19,17 +19,17 @@ html(lang=lang)
   body
     include ../../../#project/templates/#subtemplates/st-browserupgrade.pug
     .page
-      .page__header-wrap 
+      .page__header-wrap.container-page-aux
         include ../../../#project/templates/#subtemplates/st-header.pug
-      .page__content.content_page.container-page#container-page
+      .page__content.content_page.container-page-aux#container-page
         .content_page__sidebar-wrap.sidebar-wrap 
           include ../../../#project/templates/#subtemplates/st-sidebar.pug
-        .content_page__main-wrap.main-wrap 
+        .content_page__main-wrap.main-wrap
           block main
-        .content_page__aside-wrap.aside-wrap 
+        .content_page__aside-wrap.aside-wrap
           include ../../../#project/templates/#subtemplates/st-aside.pug
-      .page__footer-wrap 
+      .page__footer-wrap.container-page-aux
         include ../../../#project/templates/#subtemplates/st-footer.pug
     
-    block scripts
     script(src="./scripts/bundle.min.js")
+    block scripts
