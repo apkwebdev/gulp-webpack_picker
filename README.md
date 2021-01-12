@@ -25,7 +25,7 @@
 * Теперь выполняем установку модуля "gulp-webpack_project"
 
 ### Установка модуля "gulp-webpack_project"
-* Выполняем команду ```git clone https://github.com/apkwebdev/gulp-webpack_project.git C:\WebDev\projects\gulp-webpack\\#project\```
+* Выполняем команду ```git clone https://github.com/apkwebdev/gulp-webpack_project.git C:\WebDev\projects\gulp-webpack\#project\```
 * В директории C:\WebDev\projects\gulp-webpack\ появится директория #project\ со своими поддиректориями и файлами
 
 ### Таким образом получим
