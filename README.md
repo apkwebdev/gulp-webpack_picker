@@ -20,12 +20,12 @@
 * Название для сборщика пусть будет gulp-webpack
 
 ### Установка модуля "gulp-webpack_picker"
-* Выполняем команду git clone https://github.com/apkwebdev/gulp-webpack_picker.git C:\WebDev\projects\gulp-webpack\
+* Выполняем команду ```git clone https://github.com/apkwebdev/gulp-webpack_picker.git C:\WebDev\projects\gulp-webpack\```
 * Будет создана директория C:\WebDev\projects\gulp-webpack\ и в ней файлы сборщика и директория #picker\ со своими поддиректориями и файлами
 * Теперь выполняем установку модуля "gulp-webpack_project"
 
 ### Установка модуля "gulp-webpack_project"
-* Выполняем команду git clone https://github.com/apkwebdev/gulp-webpack_project.git C:\WebDev\projects\gulp-webpack\#project\
+* Выполняем команду ```git clone https://github.com/apkwebdev/gulp-webpack_project.git C:\WebDev\projects\gulp-webpack\\#project\```
 * В директории C:\WebDev\projects\gulp-webpack\ появится директория #project\ со своими поддиректориями и файлами
 
 ### Таким образом получим
