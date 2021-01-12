@@ -8,12 +8,13 @@
   display: flex;
   flex-direction: column;
   align-items: center; // центрируем по горизонтали page__content!
-  // Памятка по свойству flex: flex-grow flex-shrink flex-basis;
+
   @include box(100%);
 
   &__header-wrap,
   &__footer-wrap {
     flex: 0 0 auto;
+    // Памятка по свойству flex: flex-grow flex-shrink flex-basis;
     width: 100%;
   }
 
