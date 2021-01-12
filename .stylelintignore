@@ -1,6 +1,7 @@
 \#contentExchange
 \#modulesLib
 \#project/settings/presets/sprite-png.scss
+\#project/settings/presets/vars.scss
 **/vendor
 **/vendorlib
 docs
