@@ -9,7 +9,8 @@
         "function",
         "if",
         "else",
-        "return"
+        "return",
+        "each"
       ]
     }]
   }

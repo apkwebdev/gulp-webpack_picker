@@ -1,1 +1,7 @@
+\#contentExchange
+\#modulesLib
+\#project/settings/presets/sprite-png.scss
+**/vendor
+**/vendorlib
+docs
 node_modules

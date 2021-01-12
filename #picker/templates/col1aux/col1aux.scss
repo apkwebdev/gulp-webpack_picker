@@ -1,41 +1,49 @@
 @import "../../../#project/styles/_presets.scss";
+
 @include bp($container-page-aux) { #zooming { display: none; } }
-/**********===  ./#picker/template/col1aux/col1aux.scss starting  ===**********/
+
+/********* === ./#picker/template/col1aux/col1aux.scss starting  === **********/
 .page {
-  @include box(100%); 
-// Прибиваем footer к низу страницы
+  // Прибиваем footer к низу страницы
   display: flex;
   flex-direction: column;
   align-items: center; // центрируем по горизонтали page__content!
   // Памятка по свойству flex: flex-grow flex-shrink flex-basis;
-  &__header-wrap,
-  &__footer-wrap { background-color: rgb(167, 145, 145);
-    width: 100%; 
-    flex: 0 0 auto; 
-  } 
+  @include box(100%);
 
-  &__content { // width > ./settings/sets/selectors.scss > .container-page
-    flex: 1 0 auto; 
+  &__header-wrap,
+  &__footer-wrap {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  &__content {
+    // width > ./#project/settings/sets/selectors.scss > .container-page
+    flex: 1 0 auto;
+
     @include ie { // help for ie11
-      width: 100%; 
+      width: 100%;
       min-height: 1vh; // здесь важно значение в vh большее нуля
     }
-  } 
+  }
 }
 
-.content_page { background-color: rgb(133, 172, 61);
-  display: flex; 
+.content_page {
+  display: flex;
 
-  &__main-wrap { background-color: rgb(161, 172, 61); 
+  &__main-wrap {
     width: $main-width;
-    .zoom-in & { 
-      @include ie { min-height: 1vh } // help for ie11 // здесь важно значение в vh большее нуля
+
+    .zoom-in & {
+      @include ie { min-height: 1vh; } // help for ie11
+      // здесь важно значение в vh большее нуля
     }
 
-    @include fst(padding-left, $main-padding);
-    @include fst(padding-right, $main-padding);
     @include fst(padding-top, $main-padding);
+    @include fst(padding-right, $main-padding);
     @include fst(padding-bottom, $main-padding);
-  } 
+    @include fst(padding-left, $main-padding);
+  }
 }
+
 /*************  ./#picker/template/col1aux/col1aux.scss ending  ***************/
