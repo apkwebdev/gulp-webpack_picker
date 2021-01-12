@@ -201,7 +201,7 @@ function stylesPages() {
     .pipe(gulp.dest(paths.styles.dest.pages))
 };
 
-function lintCss() {
+function stylelint() {
   return gulp.src(paths.styles.watch)
     .pipe(gulpStylelint({
       reporters: [
@@ -421,11 +421,10 @@ let dev = gulp.parallel(watcher, server);
 exports.create = create;
 exports.clean = clean;
 exports.default = gulp.series(clean, create, dev);
-
+exports.slint = stylelint;
 
 // exports.pg = pages;
 // exports.st = styles;
-exports.stl = lintCss; 
 // exports.scr = scripts;
 // exports.png = spritePNG;
 // exports.svg = spriteSVG;

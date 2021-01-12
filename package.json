@@ -7,7 +7,8 @@
     "development": "gulp",
     "production": "gulp --p",
     "cleaning all except images and fonts": "gulp clean",
-    "full cleaning": "gulp clean --p"
+    "full cleaning": "gulp clean --p",
+    "stylelinting": "gulp slint"
   },
   "keywords": [],
   "author": "Aleksandr Kazarin",
