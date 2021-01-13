@@ -53,7 +53,7 @@
 // === Миксин fst() (flexible_size) на базе функции fsb (функцию смотреть в ./settings/presets/functions.scss) ===
 // Чтобы понять как работает миксин fst() нужно понять, что делает функция fsb ./settings/presets/functions.scss, и в частности её модификация функция fst! Об этом лучше почитать в файле функций.
 @mixin fst($prop, $size: $body-font-size, $k: $str) {
-  $fsu: $size * $screen-ratio * $str;
+  $fsu: $size;
   $fsl: $fsu * $k;
   $bpu: $container-page;
   $bpl: $bpu * $scr;
@@ -77,7 +77,7 @@
 
 // Следующий миксин отличается от предыдущего только тем, что класс .zoom-in добавится после класса элемента, в котором мы его применяем (replace classes). Такой порядок необходим, например, для задания размера шрифта в body. Именно в этом случае размер шрифта будет наследоваться детьми body!
 @mixin fst-rc($prop, $size: $body-font-size, $k: $str) {
-  $fsu: $size * $screen-ratio * $str;
+  $fsu: $size;
   $fsl: $fsu * $k;
   $bpu: $container-page;
   $bpl: $bpu * $scr;
@@ -93,6 +93,7 @@
   }
 }
 
+//
 // archive
 
 // @mixin fs($prop, $fsu, $fsl: $fsu * .75) {
