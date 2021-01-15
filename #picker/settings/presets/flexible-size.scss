@@ -25,11 +25,9 @@
     .container-page {
       width: 100%;
       max-width: $container-page;
-
       @include fst(padding-left, $container-page-padding);
       @include fst(padding-right, $container-page-padding);
       // !!! === >>> Центрирование > .page {align-items: center;}
-
       .zoom-in & { // Этот модуль нужен для резиновых размеров
         min-width: 100%;
       }
@@ -38,11 +36,9 @@
     .container-page-aux {
       width: 100%;
       max-width: $container-page-aux;
-
       @include fst(padding-left, $container-page-aux-padding);
       @include fst(padding-right, $container-page-aux-padding);
       // !!! === >>> Центрирование > .page {align-items: center;}
-
       .zoom-in & { // Этот модуль нужен для резиновых размеров
         min-width: 100%;
       }
@@ -57,7 +53,7 @@
   $fsl: $fsu * $k;
   $bpu: $container-page;
   $bpl: $bpu * $scr;
-
+  //
   #{$prop}: $fsu;
 
   .zoom-in & {
@@ -81,7 +77,7 @@
   $fsl: $fsu * $k;
   $bpu: $container-page;
   $bpl: $bpu * $scr;
-
+  //
   #{$prop}: $fsu;
 
   .zoom-in {

@@ -23,6 +23,7 @@
   width: $width;
   height: $height;
 }
+
 // === svgbox ===
 // .svgicon-svgname {
 //   @include svgbox(1, 1, 16px);
@@ -33,6 +34,7 @@
   width: $bw / $bh * $height;
   height: $height;
 }
+
 // === svgbox-fst ===
 // .svgicon-svgname {
 //   @include svgbox-fst(1, 1, 16px);
@@ -42,9 +44,6 @@
 @mixin svgbox-fst($bw: 1, $bh: 1, $height: $body-font-size) {
   @include fst(width, $bw / $bh * $height);
   @include fst(height, $height);
-
-  width: $bw / $bh * $height;
-  height: $height;
 }
 
 // === Стили только для IE10 и IE11 ===

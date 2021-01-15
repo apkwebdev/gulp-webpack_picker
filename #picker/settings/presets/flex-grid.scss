@@ -1,6 +1,5 @@
 // ===  mixins list:
 // row, col, size, sizebp, bp, padding, margin
-
 @mixin row($hos: $hos1, $vos: $vos1) {
   display: flex;
   flex-wrap: wrap;
@@ -19,7 +18,7 @@
 
 @mixin size($n, $hos: $hos1, $columns: $columns12) {
   $val: 100% / $columns * $n;
-
+  //
   width: calc(#{$val} - #{$hos});
 }
 
